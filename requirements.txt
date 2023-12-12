@@ -1,0 +1,3 @@
+pandas==2.1.3
+psycopg2==2.9.9
+tinkoff-investments==0.2.0b62

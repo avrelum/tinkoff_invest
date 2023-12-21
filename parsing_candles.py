@@ -56,7 +56,7 @@ def write_data(candles, tablename, flag):
   
             cursor.execute(insert_query, items)          
     else:
-        cursor.execute(sql.SQL("""SELECT time FROM {tablename} ORDER BY id DESC LIMIT 1""").format(tablename=sql.Identifier(tablename)))
+        cursor.execute(sql.SQL("""SELECT time FROM {tablename} ORDER BY time DESC LIMIT 1""").format(tablename=sql.Identifier(tablename)))
 
         last_date = cursor.fetchone()[0]
         if not flag:

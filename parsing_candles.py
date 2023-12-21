@@ -145,8 +145,9 @@ def main(uids):
     }
     start = time.time()
 
-    for interval, factor, flag in ((CandleInterval.CANDLE_INTERVAL_HOUR, 1, False), (CandleInterval.CANDLE_INTERVAL_4_HOUR, 2, False), 
-                                   (CandleInterval.CANDLE_INTERVAL_DAY, 10, False), (CandleInterval.CANDLE_INTERVAL_WEEK, 0, True)):
+    for interval, factor, flag in ((CandleInterval.CANDLE_INTERVAL_15_MIN, 0, False), (CandleInterval.CANDLE_INTERVAL_HOUR, 1, False), 
+                                   (CandleInterval.CANDLE_INTERVAL_4_HOUR, 2, False), (CandleInterval.CANDLE_INTERVAL_DAY, 10, False), 
+                                   (CandleInterval.CANDLE_INTERVAL_WEEK, 0, True)):
         candles = []
         for uid, ticker in uids:
             print(interval, uid)
